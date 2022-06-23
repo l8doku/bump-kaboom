@@ -78,7 +78,7 @@ function spawnBullet(startPos, direction) {
         bullet.bmove(bullet.velocity);
     });
 
-    bullet.addCollisionResponse("wall", (_, cls) => {
+    bullet.onBumpCollision("wall", (_, cls) => {
         if (cls.normal.x != 0) {
             bullet.velocity.x = -bullet.velocity.x / 2;
         }

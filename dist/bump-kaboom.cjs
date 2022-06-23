@@ -908,7 +908,7 @@ var $3cf14265b4415c80$export$2e2bcd8739ae039 = (k)=>{
             addBumpCollision (tag, response) {
                 filterCollection[tag] = response;
             },
-            addCollisionResponse (tag, f) {
+            onBumpCollision (tag, f) {
                 return this.on("bumpcollide", (obj, col)=>{
                     obj.is(tag) && f(obj, col);
                 });

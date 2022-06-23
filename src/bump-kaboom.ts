@@ -152,7 +152,7 @@ export default (k: KaboomCtx) => {
         filterCollection[tag] = response
       },
 
-      addCollisionResponse(tag: Tag, f: (o: GameObj, col?: BumpCollision) => void ) {
+      onBumpCollision(tag: Tag, f: (o: GameObj, col?: BumpCollision) => void ) {
         return this.on("bumpcollide", (obj: GameObj, col: BumpCollision) => {
           obj.is(tag) && f(obj, col)
         });
