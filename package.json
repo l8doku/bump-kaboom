@@ -1,0 +1,17 @@
+{
+  "name": "bump-kaboom",
+  "version": "0.0.1",
+  "source": "src/bump-kaboom.ts",
+  "main": "dist/bump-kaboom.cjs",
+  "module": "dist/bump-kaboom.js",
+  "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "^2.6.2"
+  },
+  "dependencies": {
+    "kaboom": "^2000.2.9"
+  }
+}
