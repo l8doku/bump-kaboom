@@ -78,7 +78,7 @@ function spawnBullet(startPos, direction) {
         bullet.bmove(bullet.velocity);
     });
 
-    bullet.onBumpCollision("wall", (_, cls) => {
+    bullet.addBumpCollision('wall', 'bounce', (_, cls) => {
         if (cls.normal.x != 0) {
             bullet.velocity.x = -bullet.velocity.x / 2;
         }
@@ -97,7 +97,6 @@ function spawnBullet(startPos, direction) {
             bullet.color = RED;
         }
     });
-    bullet.addBumpCollision('wall', 'bounce');
 }
 
 function shoot(playerPos) {
