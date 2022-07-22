@@ -63,10 +63,10 @@ onKeyDown("up", () => {
 
 Now `player` won't pass through walls anymore!
 
-To add collision callbacks, use the method `onBumpCollision`.
+To add collision callbacks, use the third parameter of `addBumpCollision`.
 
 ```js
-player.onBumpCollision("enemy", (wall, cls) => {
+player.addBumpCollision("enemy", "touch", (wall, cls) => {
     addKaboom(player.pos)
     player.destroy()
 })
@@ -79,7 +79,7 @@ Everything here is based on the original `bump.lua` documentation, so you can re
 
 ## Collision information
 
-The function `onBumpCollision` gives you a Collision object that contains the following fields:
+The function `addBumpCollision` gives you a Collision object that contains the following fields:
 
 -  `itemObj`: game object that is checking collision right now. `player` in the example above.
 -  `otherObj`: game object that `itemObj` collides with.
